@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  /* Digital Tech Colors */
+  --color-page: #0A0A0A;
+  --color-main: #00D4FF;
+  --color-neon: #00FF88;
+  --color-electric: #00D4FF;
+  --color-panel: #1A1A1A;
+
+  /* Tailwind Semantic Colors */
+  --color-background: 0 0 4;
+  --color-foreground: 190 100 50;
+  --color-primary: 135 100 50;
+  --color-secondary: 190 100 50;
+  --color-destructive: 0 100 67;
+  --color-muted: 0 0 10;
+  --color-border: 0 0 20;
+  --color-input: 0 0 20;
+  --color-ring: 135 100 50;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-page);
+    color: var(--color-main);
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(48px, 5vw, 96px);
+    line-height: 1.1;
+  }
+
+  .text-display-emphasis {
+    font-weight: 700;
+    text-shadow: 0 0 10px currentColor;
+  }
+}
+

@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  /* Urban Concrete Colors */
+  --color-page: #E8E8E8;
+  --color-main: #2D3748;
+  --color-steel: #4A5568;
+  --color-concrete: #718096;
+  --color-card: #F7FAFC;
+
+  /* Tailwind Semantic Colors */
+  --color-background: 210 17 91;
+  --color-foreground: 215 25 27;
+  --color-primary: 215 16 36;
+  --color-secondary: 215 20 44;
+  --color-destructive: 0 65 55;
+  --color-muted: 210 17 95;
+  --color-border: 214 15 91;
+  --color-input: 214 15 91;
+  --color-ring: 215 16 36;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-page);
+    color: var(--color-main);
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(48px, 5vw, 96px);
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+
+  .text-display-emphasis {
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+}
+

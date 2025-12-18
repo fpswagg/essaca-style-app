@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  /* Basic Style Colors */
+  --color-page: #F5F2EC;
+  --color-main: #111827;
+  --color-burgundy: #5C0E0E;
+  --color-burgundy-alt: #4E0B0B;
+  --color-cta: #FFFFFF;
+
+  /* Tailwind Semantic Colors */
+  --color-background: 245 242 236;
+  --color-foreground: 17 24 39;
+  --color-primary: 92 14 14;
+  --color-secondary: 78 11 11;
+  --color-destructive: 239 68 68;
+  --color-muted: 245 242 236;
+  --color-border: 229 225 217;
+  --color-input: 229 225 217;
+  --color-ring: 92 14 14;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-page);
+    color: var(--color-main);
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(48px, 5vw, 96px);
+    line-height: 1.1;
+  }
+
+  .text-display-emphasis {
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+

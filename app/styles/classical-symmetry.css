@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  /* Classical Symmetry Colors */
+  --color-page: #FFFFF0;
+  --color-main: #1A1A1A;
+  --color-marble: #F8F8FF;
+  --color-column: #708090;
+  --color-parchment: #FAF0E6;
+
+  /* Tailwind Semantic Colors */
+  --color-background: 60 100 97.5;
+  --color-foreground: 0 0 10;
+  --color-primary: 240 100 98;
+  --color-secondary: 210 15 50;
+  --color-destructive: 0 65 55;
+  --color-muted: 30 30 95;
+  --color-border: 30 20 90;
+  --color-input: 30 20 90;
+  --color-ring: 210 15 50;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-page);
+    color: var(--color-main);
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(48px, 5vw, 84px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .text-display-emphasis {
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+

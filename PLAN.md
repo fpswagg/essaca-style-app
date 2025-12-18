@@ -232,3 +232,62 @@ Following this plan ensures:
 > If the output is wrong, the Markdown is wrong.
 
 Fix the MD. Regenerate. Done.
+
+---
+
+## 📱 Application Structure Requirements
+
+### 1. All Sections on One Page
+
+All generated sections must be displayed on a single page, divided cleanly with clear visual separation.
+
+**Requirements:**
+- One page displays all sections from `/sections/`
+- Each section is visually separated (dividers, spacing, headers)
+- Sections are stacked vertically in a clean layout
+- Page is accessible at `/styles/[style-name]/[substyle-name]`
+
+### 2. Style-Specific CSS Files
+
+Each style must have its own CSS file to ensure style isolation.
+
+**Requirements:**
+- Each style has a dedicated CSS file: `app/styles/[style-name].css`
+- CSS file contains all tokens and utilities for that style
+- Substyles inherit from the base style CSS
+- CSS files are imported in the style-specific pages
+
+**File Structure:**
+```
+app/
+  styles/
+    [style-name].css
+  [style-name]/
+    [substyle-name]/
+      page.tsx  (displays all sections)
+```
+
+### 3. Homepage Navigation
+
+Homepage must provide navigation to all style and substyle pages.
+
+**Requirements:**
+- Homepage at `/` lists all styles
+- Each style links to its substyle pages
+- Each substyle page displays all sections with that style/substyle applied
+- Clean navigation structure
+
+**Homepage Structure:**
+- List of all styles
+- For each style, list all substyles
+- Links to `/styles/[style-name]/[substyle-name]`
+
+### 4. Component Generation Per Style/Substyle
+
+Components must be generated for each style/substyle combination.
+
+**Requirements:**
+- Generate components in: `components/[style-name]/[substyle-name]/[ComponentName]Section.tsx`
+- Each style/substyle combination has its own set of components
+- Components use the style-specific CSS file
+- All sections are imported and displayed on the style/substyle page

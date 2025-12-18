@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  /* Contemporary Geometric Colors */
+  --color-page: #FFFFFF;
+  --color-main: #1A1A1A;
+  --color-magenta: #FF006E;
+  --color-cyan: #00D4FF;
+  --color-offwhite: #FAFAFA;
+
+  /* Tailwind Semantic Colors */
+  --color-background: 0 0 100;
+  --color-foreground: 0 0 10;
+  --color-primary: 333 100 50;
+  --color-secondary: 190 100 50;
+  --color-destructive: 0 84 60;
+  --color-muted: 0 0 98;
+  --color-border: 0 0 90;
+  --color-input: 0 0 90;
+  --color-ring: 333 100 50;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-page);
+    color: var(--color-main);
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(48px, 5vw, 96px);
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .text-display-emphasis {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+

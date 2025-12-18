@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  /* Biophilic Nature Colors */
+  --color-page: #E8F5E8;
+  --color-main: #2F4F2F;
+  --color-olive: #6B8E23;
+  --color-earth: #8B7355;
+  --color-cream: #F5F5DC;
+
+  /* Tailwind Semantic Colors */
+  --color-background: 120 25 93;
+  --color-foreground: 120 20 27;
+  --color-primary: 80 55 35;
+  --color-secondary: 30 25 45;
+  --color-destructive: 0 65 55;
+  --color-muted: 60 20 92;
+  --color-border: 60 15 88;
+  --color-input: 60 15 88;
+  --color-ring: 80 55 35;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-page);
+    color: var(--color-main);
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(52px, 6vw, 88px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .text-display-emphasis {
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+

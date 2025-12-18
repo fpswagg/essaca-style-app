@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate-prompt": "tsx scripts/generate-prompt.ts"
   },
   "dependencies": {
     "next": "^16.0.10",
