@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated components (disposable, regenerate from markdown)
+/components/*.tsx
+/components/*.ts
+!/components/README.md
